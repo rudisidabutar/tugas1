@@ -2,7 +2,6 @@
 using namespace std;
 
 int main() {
-    char TipeRumah, JenisPembayaran;
     char NamaPembeli[60];
     long long HargaRumah, AngsuranPerBulan;
     long long TotalHargaRumah = 0;
@@ -17,7 +16,7 @@ int main() {
     switch (TipeRumah) {
         case 'a':
         case 'A':
-            if (JenisPembayaran == 'K' || JenisPembayaran == 'k') {
+            if (JenisPembayaran == 'K') {
                 HargaRumah = 50000000;
                 AngsuranPerBulan = 500000;
                 TotalHargaRumah = HargaRumah * 12 * 10;
@@ -27,7 +26,7 @@ int main() {
             break;
         case 'b':
         case 'B':
-            if (JenisPembayaran == 'K' || JenisPembayaran == 'k') {
+            if (JenisPembayaran == 'K') {
                 HargaRumah = 75000000;
                 AngsuranPerBulan = 750000;
                 TotalHargaRumah = HargaRumah * 12 * 10;
@@ -37,7 +36,7 @@ int main() {
             break;
         case 'c':
         case 'C':
-            if (JenisPembayaran == 'K' || JenisPembayaran == 'k') {
+            if (JenisPembayaran == 'K') {
                 HargaRumah = 85000000;
                 AngsuranPerBulan = 1000000;
                 TotalHargaRumah = HargaRumah * 12 * 10;
@@ -47,17 +46,13 @@ int main() {
             break;
         case 'd':
         case 'D':
-            if (JenisPembayaran == 'K' || JenisPembayaran == 'k') {
+            if (JenisPembayaran == 'K') {
                 HargaRumah = 1000000;
                 AngsuranPerBulan = 1000000;
                 TotalHargaRumah = HargaRumah * 12 * 10;
             } else {
                 HargaRumah = 1000000;
             }
-            break;
-        default:
-            cout << "Gagal, Ulangi Lagi!" << endl;
-    }
 
     if (JenisPembayaran == 'K' || JenisPembayaran == 'k') {
         cout << "Angsuran Perbulan: (Rp)." << AngsuranPerBulan << endl;
